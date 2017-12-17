@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
   <style>
@@ -11,17 +10,19 @@ h1 {
   font-family: Courier New;
   font-weight: bold;
   font-size: 40px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
-div {
+div.bottom-border {
   border-bottom: 2px dotted #000;
-  padding: 0 0 20px 20px;
+  padding: 20px 0 20px 20px;
 }
 
 p {
   font-size: 24px;
   color: white;
+  margin: 0 0 10px 0;
+  padding: 0;
 }
 
 img {
@@ -37,21 +38,93 @@ a:hover {
   text-decoration: none;
   color: #ffffff;
 }
+   
+    ul {
+      margin:0;
+      padding:0;
+    }
+    li.title {
+      list-style-type:none;
+      font-weight:bold;
+      font-size:18px;
+    }
+    li.complete {
+      text-decoration:line-through;
+    }
   </style>
 </head>
 <body>
-  <h1>Hi, you've reached {Girls Code Club}!</h1>
-  <div id="session4">
+  <h1>You've reached the home of {Girls Code Club}!</h1>
+  <div id="dates" class="bottom-border" style="overflow: auto;">
+    <p>2017 SESSIONS</p>
+    <div style="width: 33%; float:left;">
+      <ul>
+        <li class="title">Cohort 1: 9:30-11:00 AM</li>
+        <li class="complete">Saturday, September 16, 2017</li>
+        <li class="complete">Saturday, October 21, 2017</li>
+        <li class="complete">Saturday, November 18, 2017</li>
+        <li class="complete">Saturday, December 16, 2017</li>
+        <li>Saturday, January 20, 2018</li>
+        <li>Saturday, February 17, 2018</li>
+        <li>Saturday, March 17, 2018</li>
+        <li>Saturday, April 21, 2018</li>
+        <li>Saturday, May 19, 2018</li>
+      </ul>
+    </div>
+    <div style="width: 33%; float:left;">
+      <ul>
+        <li class="title">Cohort 2: 4:00-5:30 PM</li>
+        <li class="complete">Friday, October 6, 2017</li>
+        <li class="complete">Friday, November 3, 2017</li>
+        <li class="complete">Friday, December 1, 2017</li>
+        <li>Friday, January 5, 2018</li>
+        <li>Friday, February 2, 2018</li>
+        <li>Friday, March 2, 2018</li>
+        <li>Friday, April 6, 2018</li>
+        <li>Friday, May 4, 2018</li>
+        <li>Friday, June 1, 2018</li>
+      </ul>
+    </div>
+    <div style="width: 33%;float:left;">
+      <ul>
+        <li class="title">Cohort 3: 6:00-7:30 PM</li>
+        <li class="complete">Friday, October 6, 2017</li>
+        <li class="complete">Friday, November 3, 2017</li>
+        <li class="complete">Friday, December 1, 2017</li>
+        <li>Friday, January 5, 2018</li>
+        <li>Friday, February 2, 2018</li>
+        <li>Friday, March 2, 2018</li>
+        <li>Friday, April 6, 2018</li>
+        <li>Friday, May 4, 2018</li>
+        <li>Friday, June 1, 2018</li>
+      </ul>
+    </div>
+  </div>
+  <div id="session4" class="bottom-border">
     <p>SESSION 4: Getting Started with JavaScript</p>
     <a href="https://s3.amazonaws.com/girlscodeclub/Session4.pdf" target="_blank">Click to view handout in PDF</a>
   </div>
-  <div id="session3">
+  <div id="session3" class="bottom-border">
     <p>SESSION 3: Links, Videos, and Forms Galore</p>
     <a href="https://s3.amazonaws.com/girlscodeclub/Session3.pdf" target="_blank">Click to view handout in PDF</a>
   </div>
-  <div id="session2">
+  <div id="session2" class="bottom-border">
     <p>SESSION 2: Getting Started with HTML and CSS</p>
     <a href="https://s3.amazonaws.com/girlscodeclub/Session2.pdf" target="_blank">Click to view handout in PDF</a>
+  </div>
+   <div id="session1" class="bottom-border">
+    <p>SESSION 1: Program Introduction, Syllabus & Practice Instructions</p>
+    <a href="https://s3.amazonaws.com/girlscodeclub/Session1.pdf" target="_blank">Click to view handout in PDF</a>
+  </div>
+  <div class="bottom-border">
+    <p>CONTACTS</p>
+    <ul>
+      <li class="title">GCC Email: <a href="mailto:girlscodeclublancaster@gmail.com">girlscodeclublancaster@gmail.com</a></li>
+      <li class="title">Cohort 1 Instructor: <a href="mailto:elysedougherty@gmail.com">Elyse Ewing</a></li>
+      <li class="title">Cohort 2 & 3 Instructor: <a href="mailto:katrina.high@gmail.com">Katrina High</a></li>
+      <li class="title">Assistant Instructor: <a href="mailto:ashmacho92@gmail.com">Ashley Camacho</a></li>
+      <li class="title">LSF Contact: <a href="mailto:landis@tlsf.org">Emily Landis</a></li>
+    </ul>
   </div>
 </body>
 </html>
