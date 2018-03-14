@@ -20,6 +20,6 @@ function PostForm(question, answer) {
             console.log(json);
         }
     };
-    var data = '{ "fields": { "Question": ' + question + ', "Answer": ' + answer + ' } }'; // JSON.stringify({ "email": "hey@mail.com", "password": "101010" });
+    var data = '{ "fields": { "Question": "' + question + '", "Answer": "' + answer + '" } }'; // JSON.stringify({ "email": "hey@mail.com", "password": "101010" });
     xhr.send(data);
 }
