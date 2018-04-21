@@ -16,11 +16,11 @@ function PostForm(question, answer, name) {
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
-            var json = JSON.parse(xhr.responseText);
-            console.log(json);
-	    alert("Sent to database!");
+            //var json = JSON.parse(xhr.responseText);
+            //console.log(json);
         }
     };
     var data = '{ "fields": { "Question": "' + question + '", "Answer": "' + answer + '", "SubmittedBy": "' + name + '" } }';
     xhr.send(data);
+    alert("Sent to database!");
 }
