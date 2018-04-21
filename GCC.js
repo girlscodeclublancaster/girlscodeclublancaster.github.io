@@ -9,9 +9,9 @@
     return false;
 }
 
-function PostForm(question, answer) {
+function PostForm(question, answer, name) {
     var xhr = new XMLHttpRequest();
-    var url = "https://api.airtable.com/v0/applpntegyfIfrQWt/QuestionsAndAnswers?api_key=keyrbWVwQpct0XV6i";
+    var url = "https://api.airtable.com/v0/applpntegyfIfrQWt/Session8?api_key=keyrbWVwQpct0XV6i";
     xhr.open("POST", url, true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function () {
@@ -20,6 +20,6 @@ function PostForm(question, answer) {
             console.log(json);
         }
     };
-    var data = '{ "fields": { "Question": "' + question + '", "Answer": "' + answer + '" } }'; // JSON.stringify({ "email": "hey@mail.com", "password": "101010" });
+    var data = '{ "fields": { "Question": "' + question + '", "Answer": "' + answer + '", "SubmittedBy": "Elyse E" } }';
     xhr.send(data);
 }
