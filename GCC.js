@@ -2,7 +2,7 @@
     emailjs.init("user_hBsFRb46nBL53r9gBtua0");
     emailjs.send("gmail", "template_hdrKzGi0", { your_name: name, subject: subj, notes: text })
   	.then(function () {
-  	    alert("Sent!");
+  	    alert("Sent to inbox!");
   	}, function (err) {
   	    alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
   	});
@@ -18,8 +18,9 @@ function PostForm(question, answer, name) {
         if (xhr.readyState === 4 && xhr.status === 200) {
             var json = JSON.parse(xhr.responseText);
             console.log(json);
+	    alert("Sent to database!");
         }
     };
-    var data = '{ "fields": { "Question": "' + question + '", "Answer": "' + answer + '", "SubmittedBy": "Elyse E" } }';
+    var data = '{ "fields": { "Question": "' + question + '", "Answer": "' + answer + '", "SubmittedBy": "' + name + '" } }';
     xhr.send(data);
 }
