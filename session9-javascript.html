@@ -1,0 +1,22 @@
+<html>
+<body>
+<pre>
+function Score() {
+  var YourScore = 0;
+  var YourName = document.getElementById('Question1').value;
+  var Question2 = document.getElementById('Question2').value;
+  if (Question2 == "CorrectAnswerOptionHere") {
+    YourScore = YourScore + 1;
+  }
+  var Question3 = document.getElementById('Question3').value;
+  if (Question3 == "CorrectAnswerOptionHere") {
+    YourScore = YourScore + 1;
+  }
+  if (document.getElementById('Question4').checked) {
+    YourScore = YourScore + 1;
+  }
+  alert("Hi, " + YourName + "! Your score is " + YourScore + " out of 3");
+}
+</pre>
+</body>
+</html>
