@@ -9,6 +9,17 @@
     return false;
 }
 
+﻿function SendEmailToSomeone(email, name, subj, text) {
+    emailjs.init("user_hBsFRb46nBL53r9gBtua0");
+    emailjs.send("gmail", "template_hdrKzGi0_clone", { recipient: email, your_name: name, subject: subj, notes: text })
+  	.then(function () {
+  	    alert("Sent to inbox!");
+  	}, function (err) {
+  	    alert("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+  	});
+    return false;
+}
+
 function PostForm(question, answer, name) {
     var xhr = new XMLHttpRequest();
     var url = "https://api.airtable.com/v0/applpntegyfIfrQWt/Session8?api_key=keyrbWVwQpct0XV6i";
