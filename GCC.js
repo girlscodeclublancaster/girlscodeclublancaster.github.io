@@ -11,7 +11,7 @@
 
 ﻿function SendEmailToSomeone(email, name, subj, text) {
     emailjs.init("user_hBsFRb46nBL53r9gBtua0");
-    emailjs.send("gmail", "template_hdrKzGi0_clone", { recipient: email, your_name: name, subject: subj, notes: text })
+    emailjs.send("gmail", "template_send_to_someone", { recipient: email, your_name: name, subject: subj, notes: text })
   	.then(function () {
   	    alert("Sent to inbox!");
   	}, function (err) {
