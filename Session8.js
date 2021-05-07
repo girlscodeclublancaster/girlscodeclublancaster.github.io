@@ -1,6 +1,6 @@
 function GetSnappleFact() {
   var xhr = new XMLHttpRequest();
-    var index = randomIntFromInterval(2,1031);
+    var index = randomIntFromInterval(1,868);
     var url = "https://api.airtable.com/v0/appvIZ5SeraGObXEd/Facts?api_key=keyJriVHHy2wZ44B9&maxRecords=1&filterByFormula=({ID}=%22" + index + "%22)";
     xhr.open("GET", url, true);
     xhr.setRequestHeader("Content-type", "application/json");
