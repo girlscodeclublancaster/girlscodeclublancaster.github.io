@@ -33,3 +33,19 @@ function randomIntFromInterval(min,max) {
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
+function AddJoke(joke, name) {
+    var xhr = new XMLHttpRequest();
+    var url = "https://api.airtable.com/v0/appvIZ5SeraGObXEd/Jokes?api_key=keyJriVHHy2wZ44B9";
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            //var json = JSON.parse(xhr.responseText);
+            //console.log(json);
+        }
+    };
+    var data = '{ "fields": { "Joke": "' + joke + '", "SubmittedBy": "' + name + '" } }';
+    xhr.send(data);
+    alert("Sent to database!");
+}
+
