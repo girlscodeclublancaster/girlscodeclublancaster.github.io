@@ -1,0 +1,51 @@
+.covidPopup {
+  z-index: 11;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.covidPopupOverlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+.covidPopupContent {
+  z-index: 15;
+  background-color: white;
+  max-width: 750px;
+  border-radius: 3px;
+
+  padding: 1rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  line-height: 26px;
+}
+
+.covidPopupContent .fa-times {
+  float: right;
+  cursor: pointer;
+}
+
+.covidPopupContent h3 {
+  font-size: 22px;
+}
+
+.covidPopupContent a {
+  text-decoration: none;
+  border-bottom: 1px solid white;
+  margin-bottom: 1rem;
+  transition: 0.2s color, 0.2s border-bottom;
+}
+
+.covidPopupContent a:hover {
+  color: #a9ce2f;
+  border-bottom: 1px solid #a9ce2f !important;
+}
