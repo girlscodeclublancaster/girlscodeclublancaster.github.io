@@ -17,6 +17,10 @@
     margin-right: 0.7rem;
 }
 
+.fa-puzzle-piece, .fa-youtube {
+    margin-right: 0.4rem;
+}
+
 .session .fa-external-link-alt {
     margin-right: 0.4rem;
 }

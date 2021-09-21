@@ -24,14 +24,21 @@ function selectCohort(cohortNum) {
         // user has clicked a date/time that is already open - close it
         document.getElementById('cohortDates').innerHTML = '';
         document.getElementById('cohortTime').innerHTML = '';
-        document.getElementById('cohortContent').classList.remove('cohortContentDisplay');
-        document.getElementById(`cohort${cohortNum}`).classList.remove('selectedButton');
+        var cohortContent = document.getElementById('cohortContent');
+        if (cohortContent) {
+            cohortContent.classList.remove('cohortContentDisplay');
+        }
+        var thisCohort = document.getElementById(`cohort${cohortNum}`);
+        if (thisCohort) {
+            thisCohort.classList.remove('selectedButton');
+        }
         selectedCohort = 5;
         selectedDates = [];
     } else {
         // new date/time selection - open it on the page
         // determine the selected dates
-        selectedDates = sessions.filter((session, index) => (index % 3) === cohortNum );
+        // index % 2 if TWO COHORTS, use % 3 if THREE COHORTS
+        selectedDates = sessions.filter((session, index) => (index % 2) === cohortNum );
 
         // set up HTML for the page
         var innerHTML = '';
@@ -42,10 +49,16 @@ function selectCohort(cohortNum) {
         // inject new HTML into the page based on selection
         document.getElementById('cohortDates').innerHTML = innerHTML;
         document.getElementById('cohortTime').innerHTML = `<div>${times[cohortNum]}</div>`;
-        document.getElementById('cohortContent').classList.add('cohortContentDisplay');
+        var cohortContent = document.getElementById('cohortContent');
+        if (cohortContent) {
+            cohortContent.classList.add('cohortContentDisplay');
+        }
 
         // set UI for selected cohort
-        document.getElementById(`cohort${cohortNum}`).classList.add('selectedButton');
+        var thisCohort = document.getElementById(`cohort${cohortNum}`);
+        if (thisCohort) {
+            thisCohort.classList.add('selectedButton');
+        }
 
         // unset UI for previously selected cohort
         var previouslySelected = document.getElementById(`cohort${selectedCohort}`);
