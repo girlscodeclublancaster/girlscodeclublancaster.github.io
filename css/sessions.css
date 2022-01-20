@@ -13,6 +13,11 @@
     font-size: 20px;
 }
 
+.session .sessionDesc {
+    font-style: italic;
+    line-height: 22px;
+}
+
 .session .fa-file-pdf, .session .fa-file-powerpoint, .fa-lightbulb {
     margin-right: 0.7rem;
 }
