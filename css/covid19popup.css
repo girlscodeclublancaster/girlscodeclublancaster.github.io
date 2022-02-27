@@ -29,6 +29,13 @@
   line-height: 26px;
 }
 
+/* @media screen and (max-height: 212px) {
+  .covidPopupContent {
+    height: 212px;
+    overflow-y: scroll;
+  }
+} */
+
 .covidPopupContent .fa-times {
   float: right;
   cursor: pointer;
