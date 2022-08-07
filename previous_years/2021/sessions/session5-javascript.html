@@ -1,0 +1,60 @@
+<html>
+<body>
+<pre>
+// create our canvas
+var canvas = document.getElementById('canvas');
+var c = canvas.getContext('2d');
+ 
+// draw the body
+c.fillStyle = "#336699";
+c.fillRect(250,100,100,150);
+ 
+// left leg
+c.moveTo(270,250);
+c.lineTo(255,350);
+c.stroke();
+ 
+// right leg
+c.moveTo(330,250);
+c.lineTo(345,350);
+c.stroke();
+ 
+// left arm - upper
+c.moveTo(251,101);
+c.lineTo(200,165);
+c.stroke();
+// left arm - lower
+c.moveTo(200,165);
+c.lineTo(230,190);
+c.stroke();
+ 
+// right arm - upper
+c.moveTo(349,101);
+c.lineTo(400,165);
+c.stroke();
+// right arm - lower
+c.moveTo(400,165);
+c.lineTo(370,190);
+c.stroke();
+ 
+// head
+c.beginPath();
+c.arc(300,55,40,0,2*Math.PI);
+c.stroke();
+ 
+// left eye
+c.beginPath();
+c.arc(285,45,4,0,2*Math.PI);
+c.stroke();
+// right eye
+c.beginPath();
+c.arc(315,45,4,0,2*Math.PI);
+c.stroke();
+ 
+// smile
+c.beginPath();
+c.arc(300,60,20,0,1*Math.PI);
+c.stroke();
+</pre>
+</body>
+</html>

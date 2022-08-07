@@ -7,162 +7,185 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/footer.css">
-        <link rel="stylesheet" href="css/buttons.css">
-        <link rel="stylesheet" href="css/sessions.css">
-        <link rel="stylesheet" href="css/cohorts.css">
-        <link rel="stylesheet" href="css/layout.css">
-        <link rel="stylesheet" href="css/covid19popup.css">
+        
+        <link rel="stylesheet" href="assets/css/layout.css">
+        <link rel="stylesheet" href="assets/css/socialHeader.css">
+        <link rel="stylesheet" href="assets/css/mainHeader.css">
+        <link rel="stylesheet" href="assets/css/home.css">
+        <link rel="stylesheet" href="assets/css/schedule.css">
+        <link rel="stylesheet" href="assets/css/lessons.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
 
         <script src="https://kit.fontawesome.com/d8c1c6a470.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="js/cohortSelection.js"></script>
-        <script type="text/javascript" src="js/covid19Popup.js"></script>
+        <script type="text/javascript" src="assets/js/nav.js"></script>
+        <script type="text/javascript" src="assets/js/schedule.js"></script>
     </head>
     <body>
-        <div class="covidPopup" id="covidPopup">
-            <div class="covidPopupOverlay"></div>
-            <div class="covidPopupContent">
-                <i class="fas fa-times" onclick="onClosePopup()"></i>
-                <h3>COVID-19 Update from LSF</h3>
-                <!-- <p><i>The Lancaster Science Factory takes health and safety measures seriously and continues to enforce the following mask requirement inside the facility:</i>  <b>CLOTH MASKS THAT COVER THE NOSE AND MOUTH FOR ALL GUESTS OVER THE AGE OF 2 ARE REQUIRED IN OUR FACILITY. NO EXCEPTIONS.</b> Face or mouth shields alone are NOT acceptable. While State regulations have relaxed for fully vaccinated individuals, we understand that many families that visit the Science Factory will be with children who are not yet fully vaccinated or able to be vaccinated. We remain committed to keeping our facility OPEN and SAFE for everyone to enjoy.</p> -->
-                <p><i>Based on CDC guidance issued on Friday, February 26th, 2022, masks are now optional at the Lancaster Science Factory.</i></p>
-                <p>Click here to view our full <a href="https://lancastersciencefactory.org/covid-19/" target="_blank">COVID-19 policies.</a></p>
-            </div>
-        </div>
         <div class="socialHeader">
             <div class="quickLink">
                 <a class="regularFont" href="https://codepen.io/" target="_blank">
                     <i class="fab fa-codepen"></i> CodePen.io
                 </a>
             </div>
-            <div class="socials">
-                <a href="https://www.facebook.com/LancasterScienceFactory" target="_blank">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="https://www.instagram.com/the_lancaster_science_factory/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/company/the-lancaster-science-factory/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+            <div class="navLinks">
+                <a class="regularFont navUnderline" href="javascript:void(0);" onclick="selectNav('home')" id="home-nav">Home</a>
+                <a class="regularFont" href="javascript:void(0);" onclick="selectNav('schedule')" id="schedule-nav">Schedule</a>
+                <a class="regularFont" href="javascript:void(0);" onclick="selectNav('lessons')" id="lessons-nav">Lessons</a>
             </div>
         </div>
         <div class="mainHeader">
-            <h3 class="regularFont">welcome to</h3>
-            <h1 class="boldedFont">{ Girls Code Club }</h1>
-            <p class="regularFont headerDesc">Sessions occur the 4th week of each month (except November and December due to holidays). Select a cohort to view the schedule for Girls Code Club V6.0.</p>
-            <div class="buttonRow">
-                <div id="cohort0" class="button regularFont" onclick="selectCohort(0)">
-                    Thursday Cohort
+            <div class="imageContainer"><img src="./assets/images/rubber_duckies_cropped.jpg" /></div>
+            <div class="contentContainer">
+                <h3 class="regularFont">welcome to</h3>
+                <h1 class="boldedFont">{ Girls Code Club }</h1>
+                <p class="regularFont headerDesc">Sessions *generally* occur the 3rd week of each month. Confirm session dates and times <a href="javascript:void(0);" onclick="selectNav('schedule')">HERE</a>!</p>
+            </div>
+        </div>
+        <div class="home" id="home">
+            <div class="who">
+                <div class="served">
+                    <p class="regularFont">To Date, Over</p>
+                    <h1 class="boldedFont">300</h1>
+                    <p class="regularFont">Girls Have Graduated</p>
+                    <a href="https://lancastersciencefactory.org/stemeducation/girlscodeclub/girls-code-club-registration/" target="_blank" class="regularFont">Register</a>
                 </div>
-                <!-- <div id="cohort1" class="button regularFont" onclick="selectCohort(1)">
-                    Sunday Cohort #1
-                </div> -->
-                <div id="cohort2" class="button regularFont" onclick="selectCohort(1)">
-                    Sunday Cohort
+                <div class="details">
+                    <h2 class="boldedFont">Who Are We?</h2>
+                    <p class="regularFont">Girls Code Club is an organization hosted by the Lancaster Science Factory that strives to expose girls aged 8-13 to the world of coding, and coding-related concepts. This is a <b>monthly</b> facilitated meetup.</p>
+                    <a href="https://lancastersciencefactory.org/stemeducation/girlscodeclub/" target="_blank" class="regularFont">Learn More</a>
                 </div>
             </div>
         </div>
-        <div class="cohortBlockRow">
-            <div id="cohortContent" class="cohortBlock">
-                <div id="cohortTime" class="boldedFont"></div>
-                <div id="cohortDates" class="regularFont"></div>
-                <div class="thirdWeek regularFont">* date occurs on 3rd week</div>
+        <div class="schedule hidden" id="schedule">
+            <h2 class="boldedFont">Schedule 2022-2023</h2>
+            <div class="regularFont scheduleFilters">
+                <div>Filter by Cohort:</div>
+                <div class="filterGroup">
+                    <div class="filterButton active" id="filter-0" onclick="selectFilter('0')">All</div>
+                    <div class="filterButton" id="filter-1" onclick="selectFilter('1')">Cohort 1</div>
+                    <div class="filterButton" id="filter-2" onclick="selectFilter('2')">Cohort 2</div>
+                    <div class="filterButton" id="filter-3" onclick="selectFilter('3')">Cohort 3</div>
+                </div>
+            </div>
+            <p class="regularFont disclaimer">** Not all session dates occur during the 3rd week of the month! Please pay attention to the date / time listed for your cohort.</p>
+            <div class="cohort1" id="cohort-1">
+                <h3 class="boldedFont">Cohort 1: Intermediate to Advanced Coders</h3>
+                <p class="regularFont"><span class="boldedFont">When:</span> Sundays @ 1:00 PM - 2:30 PM</p>
+                <ul class="regularFont">
+                    <li>September 18th, 2022</li>
+                    <li>October 23rd, 2022</li>
+                    <li>November 20th, 2022</li>
+                    <li>December 11th, 2022</li>
+                    <li>January 15th, 2023</li>
+                    <li>February 12th, 2023</li>
+                    <li>March 12th, 2023</li>
+                    <li>April 16th, 2023</li>
+                    <li>May 14th, 2023</li>
+                </ul>
+            </div>
+            <div class="cohort2" id="cohort-2">
+                <h3 class="boldedFont">Cohort 2: Beginner Coders</h3>
+                <p class="regularFont"><span class="boldedFont">When:</span> Sundays @ 3:00 PM - 4:30 PM</p>
+                <ul class="regularFont">
+                    <li>September 18th, 2022</li>
+                    <li>October 23rd, 2022</li>
+                    <li>November 20th, 2022</li>
+                    <li>December 11th, 2022</li>
+                    <li>January 15th, 2023</li>
+                    <li>February 12th, 2023</li>
+                    <li>March 12th, 2023</li>
+                    <li>April 16th, 2023</li>
+                    <li>May 14th, 2023</li>
+                </ul>
+            </div>
+            <div class="cohort3" id="cohort-3">
+                <h3 class="boldedFont">Cohort 3: All Experience Levels</h3>
+                <p class="regularFont"><span class="boldedFont">When:</span> Wednesdays @ 4:00 PM - 5:30 PM</p>
+                <ul class="regularFont">
+                    <li>September 21st, 2022</li>
+                    <li>October 19th, 2022</li>
+                    <li>November 16th, 2022</li>
+                    <li>December 14th, 2022</li>
+                    <li>January 18th, 2023</li>
+                    <li>February 15th, 2023</li>
+                    <li>March 15th, 2023</li>
+                    <li>April 19th, 2023</li>
+                    <li>May 17th, 2023</li>
+                </ul>
             </div>
         </div>
-        <div class="sessions">
+        <div class="sessions hidden" id="lessons">
+            <h2 class="boldedFont">Lessons 2022-2023</h2>
+            <p class="regularFont">For the 2022-2023 year, <b>Cohort 1 will be learning Python</b> while <b>Cohorts 2 & 3 learn JavaScript</b>! All cohorts will be learning the same concepts at the same time, but in different coding languages. Given that Cohort 1 largely consists of returning students, they will also have the opportunity to vote on our next "Hall of Heroes" plaque (dedicated to Girls Code Club)!</p>
             <div class="session">
-                <h2 class="boldedFont">Session 1: What's In A Website?</h2>
-                <a class="regularFont" href="pdfs/Session1_WhatsInAWebsite.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a>
-                <a class="regularFont" href="https://cdn.shopify.com/s/files/1/1532/7563/files/Ada_Lovelace_-_How_to_write_a_program_bcd994eb-a2c2-4bac-ac2f-645fcfd2e877.pdf?v=1601576373" target="_blank"><i class="fas fa-puzzle-piece"></i> <b>Ada Lovelace</b> Activity</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=O5nskjZ_GoI" target="_blank"><i class="fab fa-youtube"></i> <b>Ada Lovelace</b> Video</a>
+                <h3 class="boldedFont">Session 1: Ground Rules & Internet Safety</h3>
+                <p class="sessionDesc">This session includes GCC expectations, Internet Safety, usernames, and our "SHEro of the Month" (Radia Joy Perlman a.k.a. "Mother of the Internet") for all cohorts. In addition...</p>
+                <p class="boldedFont">Cohort 1</p>
+                <ul class="regularFont">
+                    <li>Python Variables</li>
+                    <li>Voting on a SHEro to add to the Lancaster Science Factory's "Hall of Heroes"!</li>
+                </ul>
+                <p class="boldedFont">Cohorts 2 & 3</p>
+                <ul class="regularFont">
+                    <li>Typing 101: Stretching our Coding Fingers</li>
+                </ul>
+                <a class="regularFont" href="assets/pdfs/Session1_Intro_InternetSafety.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a>
+                <!-- <a class="regularFont" href="https://cdn.shopify.com/s/files/1/1532/7563/files/Ada_Lovelace_-_How_to_write_a_program_bcd994eb-a2c2-4bac-ac2f-645fcfd2e877.pdf?v=1601576373" target="_blank"><i class="fas fa-puzzle-piece"></i> <b>Ada Lovelace</b> Activity</a> -->
+                <a class="regularFont" href="https://jr.brainpop.com/artsandtechnology/technology/internetsafety/" target="_blank"><i class="fab fa-youtube"></i> BrainPop <b>Internet Safety</b> Video</a>
+                <a class="regularFont" href="https://jr.brainpop.com/artsandtechnology/technology/internetsafety/easyquiz/" target="_blank"><i class="fas fa-brain"></i> BrainPop <b>Internet Safety</b> Quiz (Easy)</a>
+                <a class="regularFont" href="https://jr.brainpop.com/artsandtechnology/technology/internetsafety/hardquiz/" target="_blank"><i class="fas fa-brain"></i> BrainPop <b>Internet Safety</b> Quiz (Difficult)</a>
+                <a class="regularFont" href="https://www.tvokids.com/school-age/games/keyboard-climber-2" target="_blank"><i class="fas fa-gamepad"></i> Keyboard Climber 2</a>
+                <a class="regularFont" href="https://www.kidztype.com/flappy-typing_be35d9cfe.html" target="_blank"><i class="fas fa-gamepad"></i> Flappy Typing</a>
+                <a class="regularFont" href="https://www.typing.com/student/game/keyboard-ninja" target="_blank"><i class="fas fa-gamepad"></i> Keyboard Ninja</a>
                 <!-- RELEASE AFTER BOTH COHORTS -->
-                <a class="regularFont" href="pdfs/Session1Presentation.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the powerpoint!</a>
+                <!-- <a class="regularFont" href="pdfs/Session1Presentation.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the powerpoint!</a> -->
                 <!-- BONUS MATERIALS - release after the session and point to them in 1 week follow up email -->
-                <a class="regularFont" href="https://www.w3schools.com/html/html_basic.asp" target="_blank"><i class="far fa-lightbulb"></i> Learn more about building a basic web page.</a>
-                <a class="regularFont" href="https://www.w3schools.com/charsets/ref_emoji.asp" target="_blank"><i class="fas fa-external-link-alt"></i> <b>Bonus Material:</b> Adding Emojis to a Website</a>
-                <a class="regularFont" href="https://developers.google.com/fonts/docs/getting_started" target="_blank"><i class="fas fa-external-link-alt"></i> <b>Bonus Material:</b> Using Google Fonts</a>
-                <a class="regularFont" href="https://direction.com/statistics-of-user-experience-on-website-stats/" target="_blank"><i class="fas fa-external-link-alt"></i> <b>Bonus Material:</b> The Power of User Experience</a>
-                <p class="sessionDesc">During this session, we introduced basic parts of a website (HTML / CSS) and learned about our SHEro of the month - Ada Lovelace! Ada is credited for being the FIRST programmer.</p>
+                <!-- <a class="regularFont" href="https://www.w3schools.com/html/html_basic.asp" target="_blank"><i class="far fa-lightbulb"></i> Learn more about building a basic web page.</a> -->
+                <!-- <a class="regularFont" href="https://www.w3schools.com/charsets/ref_emoji.asp" target="_blank"><i class="fas fa-external-link-alt"></i> <b>Bonus Material:</b> TBD</a> -->
             </div>
             <div class="session">
-                <h2 class="boldedFont">Session 2: Internet Safety & A Few New Tricks</h2>
-                <a class="regularFont" href="pdfs/Session2_InternetSafetyAndWebsiteContinued.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a>
-                <a class="regularFont" href="https://youtu.be/oN3C1FscM-w" target="_blank"><i class="fab fa-youtube"></i> <b>Grace Hopper</b> Video</a>
-                <a class="regularFont" href="https://jr.brainpop.com/artsandtechnology/technology/internetsafety/" target="_blank"><i class="fab fa-youtube"></i> Internet Safety Video</a>
-                <a class="regularFont" href="pdfs/Session2Presentation.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the powerpoint!</a>
-                <p class="sessionDesc">During this session, we added videos, forms, and emojis to our CodePen websites. Internet safety was another area of focus where each girl created a username to be used for the rest of the year. We also learned about our SHEro of the month - Grace Hopper! Grace programmed for the military.</p>
+                <h3 class="boldedFont">Session 2: Debugging, Variables, & (Creating Our Own) Google Logos</h3>
+                <p>Materials will be made available in October, 2022.</p>
             </div>
             <div class="session">
-                <h2 class="boldedFont">Session 3: Getting Started with JavaScript</h2>
-                <a class="regularFont" href="pdfs/Session3_JavaScript.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=wD7GmF2mzdc" target="_blank"><i class="fab fa-youtube"></i> <b>Margaret Hamilton</b> Video</a>
-                <a class="regularFont" href="pdfs/Session3Presentation.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the powerpoint!</a>
-                <p class="sessionDesc">During this session, we learned about JavaScript and our SHEro of the month - Margaret Hamilton! Margaret was an engineer for NASA, and is still alive today. There was also an unveiling of a NEW Margaret Hamilton plaque at LSF, dedicated to this year's Girls Code Club.</p>
+                <h3 class="boldedFont">Session 3: Data Types, Math, & Functions</h3>
+                <p>Materials will be made available in November, 2022.</p>
             </div>
             <div class="session">
-                <h2 class="boldedFont">Session 4: Robots (Edison Style)</h2>
-                <a class="regularFont" href="pdfs/Session4_Robots.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a>
-                <a class="regularFont" href="pdfs/EdBlocks-and-Edison-light-performer-student" target="_blank"><i class="far fa-file-pdf"></i> Day of Code: Perform in the Spotlight</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=L-Rn6q4o_ko" target="_blank"><i class="fab fa-youtube"></i> <b>Hedy Lamarr</b> Video</a>
-                <a class="regularFont" href="pdfs/Session4Presentation.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the powerpoint!</a>
-                <p class="sessionDesc">During this session, we learned all about Edison Robots and our SHEro of the month - Hedy Lamarr! Hedy was an actress AND laid the groundwork for WiFi and GPS.</p>
+                <h3 class="boldedFont">Session 4: Review, Algorithms, DE&I in Technology</h3>
+                <p>Materials will be made available in December, 2022.</p>
             </div>
             <div class="session">
-                <h2 class="boldedFont">Session 5: Conditionals and an Introduction to Loops</h2>
-                <a class="regularFont" href="pdfs/Session5_Conditionals.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=a78uBNlI8Z0" target="_blank"><i class="fab fa-youtube"></i> <b>Carol Shaw</b> Video</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=6C25zY1H0iU" target="_blank"><i class="fab fa-youtube"></i> Conditionals (If/Else) Video</a>
-                <a class="regularFont" href="pdfs/Session5Presentation.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the powerpoint!</a>
-                <a class="regularFont" href="https://www.w3schools.com/colors/colors_names.asp" target="_blank"><i class="fas fa-external-link-alt"></i> CSS Color Names</a>
-                <a class="regularFont" href="https://codecombat.com/" target="_blank"><i class="fas fa-external-link-alt"></i> CodeCombat (lesson review)</a>
-                <p class="sessionDesc">During this session, we learned all about conditionals and our SHEro of the month - Carol Shaw! Carol was the first female video game developer.</p>
+                <h3 class="boldedFont">Session 5: Conditionals & Where in the World is Technology?</h3>
+                <p>Materials will be made available in January, 2023.</p>
             </div>
             <div class="session">
-                <!-- <h2 class="boldedFont">Session 6: Gradients, Animations, Checkboxes, & Textareas</h2> -->
-                <h2 class="boldedFont">Session 6: Loops</h2>
-                <a class="regularFont" href="pdfs/Session6_Loops.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=ApyTBucW4BA" target="_blank"><i class="fab fa-youtube"></i> <b>Anita Borg</b> Video</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=hHieLtOMdfU" target="_blank"><i class="fab fa-youtube"></i> Anita Borg Institute</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=Fcwdzb3SJrk" target="_blank"><i class="fab fa-youtube"></i> Grace Hopper Celebration (GHC) 2022</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=v-K-4KuA8mQ" target="_blank"><i class="fab fa-youtube"></i> While / Do While Loops Video</a>
-                <a class="regularFont" href="pdfs/Session6Presentation.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the powerpoint!</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=ghCbURMWBD8" target="_blank"><i class="fab fa-youtube"></i> Variables Recap Video</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=HQ3dCWjfRZ4" target="_blank"><i class="fab fa-youtube"></i> Conditionals Recap Video</a>
-                <a class="regularFont" href="https://codepen.io/girlscodeclublancaster/pen/qBVoYmE" target="_blank"><i class="fas fa-external-link-alt"></i> Working CodePen of this Month's Exercise</a>
-                <p class="sessionDesc">During this session, we learned all about loops and our SHEro of the month - Anita Borg! Anita laid the groundwork for encouraging more women to join Computer Science.</p>
+                <h3 class="boldedFont">Session 6: Loops & Social and Ethical Issues in CS</h3>
+                <p>Materials will be made available in February, 2023.</p>
             </div>
             <div class="session">
-                <h2 class="boldedFont">Session 7: Debugging</h2>
-                <a class="regularFont" href="pdfs/Session7_Debugging.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a>
-                <a class="regularFont" href="https://www.youtube.com/watch?v=aPweFhhXFvY" target="_blank"><i class="fab fa-youtube"></i> <b>ENIAC Women</b> Video</a>
-                <a class="regularFont" href="pdfs/Session7Presentation.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the powerpoint!</a>
-                <p class="sessionDesc">During this session, we learned all about debugging with our rubber ducks and our SHEro(s) of the month - The ENIAC Women!</p>
+                <h3 class="boldedFont">Session 7: Putting It Together (Loops & Conditionals) & Cyber Security</h3>
+                <p>Materials will be made available in March, 2023.</p>
             </div>
             <div class="session">
-                <!-- <h2 class="boldedFont">Session 8: Behind the Scenes on Web: Databases</h2> -->
-                <h2 class="boldedFont">Session 8</h2>
-                <p>Materials will be made available in April.</p>
-                <!-- <a class="regularFont" href="" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a> -->
+                <h3 class="boldedFont">Session 8: Course Project</h3>
+                <p>Materials will be made available in April, 2023.</p>
             </div>
             <div class="session">
-                <h2 class="boldedFont">Session 9: You Made It!</h2>
-                <p>Materials will be made available in May.</p>
-                <!-- <a class="regularFont" href="" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a> -->
+                <h3 class="boldedFont">Session 9: The Year in Review</h3>
+                <p>Materials will be made available in May, 2023.</p>
             </div>
             <div class="session">
                 <h2 class="boldedFont">Continuing Resources</h2>
                 <p>Materials coming soon!</p>
-                <!-- <a class="regularFont" href="" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a> -->
             </div>
         </div>
         <div class="footerContainer">
             <div class="footer">
                 <div class="instructors">
-                    <div class="regularFont">Co-Head Coach (Thursday & Sunday): <a href="mailto:emmali.montgomery@gmail.com" target="_blank">Emma Montgomery</a></div>
-                    <div class="regularFont">Co-Head Coach (Sunday): Anna Piro</div>
-                    <div class="regularFont">Assistant Coach (Thursday): Lindsay Klatzkin</div>
+                    <div class="regularFont">Head Coach: <a href="mailto:emmali.montgomery@gmail.com" target="_blank">Emma Montgomery</a></div>
+                    <div class="regularFont">Assistant Coach (Wednesday): Lindsay Klatzkin</div>
+                    <div class="regularFont">Assistant Coach (Sunday): Sarah Karpel</div>
                 </div>
                 <div class="contacts">
                     <div class="regularFont">GCC Email: <a href="mailto:girlscodeclublancaster@gmail.com" target="_blank">girlscodeclublancaster@gmail.com</a></div>
@@ -171,7 +194,7 @@
             </div>
             <div class="copyright regularFont">
                 <i class="far fa-copyright"></i>
-                2021-2022
+                2022-2023
                 <a href="https://lancastersciencefactory.org/" target="_blank"> The Lancaster Science Factory</a>
             </div>
         </div>

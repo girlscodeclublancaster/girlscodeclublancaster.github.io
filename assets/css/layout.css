@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f7f2e6;
+}
+
+/* other */
+h1 {
+    color: #f7f2e6;
+}
+
+.boldedFont {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+.regularFont {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+}
+
+.hidden {
+    display: none;
+}
+
+.navUnderline {
+    border-bottom: 1px solid #f7f2e6 !important;
+}

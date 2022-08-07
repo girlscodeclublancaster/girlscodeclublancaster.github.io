@@ -1,0 +1,72 @@
+.schedule {
+    margin: 2rem;
+}
+
+.schedule h3 {
+    color: #bba2db;
+    margin-top: 2rem;
+    margin-bottom: 12px;
+}
+
+.schedule p {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.schedule ul {
+    margin-top: 8px;
+}
+
+.schedule ul li {
+    font-size: 14px;
+}
+
+.schedule .scheduleFilters {
+    display: flex;
+    align-items: center;
+}
+
+.schedule .scheduleFilters .filterGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.schedule .scheduleFilters .filterButton {
+    cursor: pointer;
+    margin: 0 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 100px;
+    text-align: center;
+}
+
+.schedule .scheduleFilters .active {
+    border-top-color: #bba2db !important;
+    border-bottom-color: #bba2db !important;
+    border-left-color: #8064a5 !important;
+    border-right-color: #8064a5 !important;
+    font-weight: bold;
+}
+
+.schedule .disclaimer {
+    margin-top: 16px;
+}
+
+@media screen and (max-width: 800px) {
+    .scheduleFilters {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
+    .filterGroup {
+        margin-top: 12px;
+        flex-wrap: wrap;
+    }
+
+    .filterButton {
+        margin-bottom: 8px !important;
+    }
+}
