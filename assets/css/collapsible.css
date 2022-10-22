@@ -1,0 +1,37 @@
+.collapsible {
+    background-color: #bba2db;
+    color: white;
+    cursor: pointer;
+    padding: 0px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    margin-top: 1rem;
+}
+
+.collapsible > h3 {
+    font-size: 18px;
+}
+
+.collapsible.active, .collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible.active > h3, .collapsible:hover > h3 {
+    color: white;
+}
+
+.content {
+    display: none;
+    background-color: #e2e2e2;
+    width: 100%;
+}
+
+.content > .contentContainer {
+    margin: 1rem;
+}
+
+.content div {
+    padding: 8px 0px;
+}

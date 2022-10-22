@@ -15,10 +15,12 @@
         <link rel="stylesheet" href="assets/css/schedule.css">
         <link rel="stylesheet" href="assets/css/lessons.css">
         <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/collapsible.css">
 
         <script src="https://kit.fontawesome.com/d8c1c6a470.js" crossorigin="anonymous"></script>
         <script type="text/javascript" src="assets/js/nav.js"></script>
         <script type="text/javascript" src="assets/js/schedule.js"></script>
+        <script type="text/javascript" src="assets/js/cohorts.js"></script>
     </head>
     <body>
         <div class="socialHeader">
@@ -118,62 +120,129 @@
             <h2 class="boldedFont">Lessons 2022-2023</h2>
             <p class="regularFont">For the 2022-2023 year, <b>Cohort 1 will be learning Python</b> while <b>Cohorts 2 & 3 learn JavaScript</b>! All cohorts will be learning the same concepts at the same time, but in different coding languages. Given that Cohort 1 largely consists of returning students, they will also have the opportunity to vote on our next "Hall of Heroes" plaque (dedicated to Girls Code Club)!</p>
             <div class="session">
-                <h3 class="boldedFont">Session 1: Ground Rules & Internet Safety</h3>
-                <p class="sessionDesc">This session includes GCC expectations, Internet Safety, usernames, and our "SHEro of the Month" (Radia Joy Perlman a.k.a. "Mother of the Internet") for all cohorts. In addition...</p>
-                <p class="boldedFont">Cohort 1</p>
-                <ul class="regularFont">
-                    <li>Python Variables</li>
-                    <li>Voting on a SHEro to add to the Lancaster Science Factory's "Hall of Heroes"!</li>
-                </ul>
-                <p class="boldedFont">Cohorts 2 & 3</p>
-                <ul class="regularFont">
-                    <li>Typing 101: Stretching our Coding Fingers</li>
-                </ul>
-                <a class="regularFont" href="assets/pdfs/Session1_Intro_InternetSafety.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a>
-                <!-- <a class="regularFont" href="https://cdn.shopify.com/s/files/1/1532/7563/files/Ada_Lovelace_-_How_to_write_a_program_bcd994eb-a2c2-4bac-ac2f-645fcfd2e877.pdf?v=1601576373" target="_blank"><i class="fas fa-puzzle-piece"></i> <b>Ada Lovelace</b> Activity</a> -->
-                <a class="regularFont" href="https://jr.brainpop.com/artsandtechnology/technology/internetsafety/" target="_blank"><i class="fab fa-youtube"></i> BrainPop <b>Internet Safety</b> Video</a>
-                <a class="regularFont" href="https://jr.brainpop.com/artsandtechnology/technology/internetsafety/easyquiz/" target="_blank"><i class="fas fa-brain"></i> BrainPop <b>Internet Safety</b> Quiz (Easy)</a>
-                <a class="regularFont" href="https://jr.brainpop.com/artsandtechnology/technology/internetsafety/hardquiz/" target="_blank"><i class="fas fa-brain"></i> BrainPop <b>Internet Safety</b> Quiz (Difficult)</a>
-                <a class="regularFont" href="https://www.tvokids.com/school-age/games/keyboard-climber-2" target="_blank"><i class="fas fa-gamepad"></i> Keyboard Climber 2</a>
-                <a class="regularFont" href="https://www.kidztype.com/flappy-typing_be35d9cfe.html" target="_blank"><i class="fas fa-gamepad"></i> Flappy Typing</a>
-                <a class="regularFont" href="https://www.typing.com/student/game/keyboard-ninja" target="_blank"><i class="fas fa-gamepad"></i> Keyboard Ninja</a>
-                <!-- RELEASE AFTER BOTH COHORTS -->
-                <!-- <a class="regularFont" href="pdfs/Session1Presentation.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the powerpoint!</a> -->
-                <!-- BONUS MATERIALS - release after the session and point to them in 1 week follow up email -->
-                <!-- <a class="regularFont" href="https://www.w3schools.com/html/html_basic.asp" target="_blank"><i class="far fa-lightbulb"></i> Learn more about building a basic web page.</a> -->
-                <!-- <a class="regularFont" href="https://www.w3schools.com/charsets/ref_emoji.asp" target="_blank"><i class="fas fa-external-link-alt"></i> <b>Bonus Material:</b> TBD</a> -->
+                <button type="button" class="collapsible">
+                    <h3 class="boldedFont">Session 1: Ground Rules, Internet Safety, and Variables</h3>
+                </button>
+                <div class="content">
+                    <div class="contentContainer">
+                        <p class="sessionDesc">This session includes GCC expectations, Internet Safety, usernames, and our "SHEro of the Month" (Radia Joy Perlman a.k.a. "Mother of the Internet") for all cohorts. In addition...</p>
+                        <p class="boldedFont">Cohort 1</p>
+                        <ul class="regularFont">
+                            <li>Python Variables</li>
+                            <li>Voting on a SHEro to add to the Lancaster Science Factory's "Hall of Heroes"!</li>
+                        </ul>
+                        <p class="boldedFont">Cohorts 2 & 3</p>
+                        <ul class="regularFont">
+                            <li>Typing 101: Stretching our Coding Fingers</li>
+                        </ul>
+                        <div><a class="regularFont" href="assets/pdfs/Session1_Intro_InternetSafety.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a></div>
+                        <!-- <a class="regularFont" href="https://cdn.shopify.com/s/files/1/1532/7563/files/Ada_Lovelace_-_How_to_write_a_program_bcd994eb-a2c2-4bac-ac2f-645fcfd2e877.pdf?v=1601576373" target="_blank"><i class="fas fa-puzzle-piece"></i> <b>Ada Lovelace</b> Activity</a> -->
+                        <div><a class="regularFont" href="https://jr.brainpop.com/artsandtechnology/technology/internetsafety/" target="_blank"><i class="fab fa-youtube"></i> BrainPop <b>Internet Safety</b> Video</a></div>
+                        <div><a class="regularFont" href="https://jr.brainpop.com/artsandtechnology/technology/internetsafety/easyquiz/" target="_blank"><i class="fas fa-brain"></i> BrainPop <b>Internet Safety</b> Quiz (Easy)</a></div>
+                        <div><a class="regularFont" href="https://jr.brainpop.com/artsandtechnology/technology/internetsafety/hardquiz/" target="_blank"><i class="fas fa-brain"></i> BrainPop <b>Internet Safety</b> Quiz (Difficult)</a></div>
+                        <!-- RELEASE AFTER BOTH COHORTS -->
+                        <div><a class="regularFont" href="assets/pres/Session1_Python.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the <b>Python</b> powerpoint!</a></div>
+                        <div><a class="regularFont" href="assets/pres/Session1_JavaScript.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the <b>JavaScript</b> powerpoint!</a></div>
+                        <!-- BONUS MATERIALS - release after the session and point to them in 1 week follow up email -->
+                    </div>
+                </div>
             </div>
             <div class="session">
-                <h3 class="boldedFont">Session 2: Debugging, Variables, & (Creating Our Own) Google Logos</h3>
-                <p>Materials will be made available in October, 2022.</p>
+                <button type="button" class="collapsible">
+                    <h3 class="boldedFont">Session 2: Debugging, Data Types & Arrays</h3>
+                </button>
+                <div class="content">
+                    <div class="contentContainer">
+                        <p class="sessionDesc">This session includes debugging with our Rubber Duckies and TWO "SHEro of the Month"s (Grace Hopper and Joan Clarke) for all cohorts. In addition...</p>
+                        <p class="boldedFont">Cohort 1</p>
+                        <ul class="regularFont">
+                            <li>Introduction to Python</li>
+                            <li>Python data types and arrays, with group exercises & coding practice</li>
+                            <li>Creating a Google Logo</li>
+                        </ul>
+                        <p class="boldedFont">Cohorts 2 & 3</p>
+                        <ul class="regularFont">
+                            <li>Introduction to JavaScript</li>
+                            <li>JavaScript data types and arrays, with group exercises & coding practice.</li>
+                        </ul>
+                        <div><a class="regularFont" href="assets/pdfs/Session2Handout_All_Cohorts.pdf" target="_blank"><i class="far fa-file-pdf"></i> PDF Handout</a></div>
+                        <div><a class="regularFont" href="https://www.youtube.com/watch?v=Fg82iV-L8ZY" target="_blank"><i class="fab fa-youtube"></i> <b>Grace Hopper</b> Video</a></div>
+                        <!-- RELEASE AFTER BOTH COHORTS -->
+                        <!-- <a class="regularFont" href="assets/pres/Session2_Python.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the <b>Python</b> powerpoint!</a>
+                        <a class="regularFont" href="assets/pres/Session2_JavaScript.pdf" target="_blank"><i class="far fa-file-powerpoint"></i> Miss this session? View the <b>JavaScript</b> powerpoint!</a> -->
+                        <!-- BONUS MATERIALS - release after the session and point to them in 1 week follow up email -->
+                    </div>
+                </div>
             </div>
             <div class="session">
-                <h3 class="boldedFont">Session 3: Data Types, Math, & Functions</h3>
-                <p>Materials will be made available in November, 2022.</p>
+                <button type="button" class="collapsible">
+                    <h3 class="boldedFont">Session 3: Data Types, Math, & Functions</h3>
+                </button>
+                <div class="content">
+                    <div class="contentContainer">
+                        <p>Materials will be made available in November, 2022.</p>
+                    </div>
+                </div>
             </div>
             <div class="session">
-                <h3 class="boldedFont">Session 4: Review, Algorithms, DE&I in Technology</h3>
-                <p>Materials will be made available in December, 2022.</p>
+                <button type="button" class="collapsible">
+                    <h3 class="boldedFont">Session 4: Review, Algorithms, DE&I in Technology</h3>
+                </button>
+                <div class="content">
+                    <div class="contentContainer">
+                        <p>Materials will be made available in December, 2022.</p>
+                    </div>
+                </div>
             </div>
             <div class="session">
-                <h3 class="boldedFont">Session 5: Conditionals & Where in the World is Technology?</h3>
-                <p>Materials will be made available in January, 2023.</p>
+                <button type="button" class="collapsible">
+                    <h3 class="boldedFont">Session 5: Conditionals & Where in the World is Technology?</h3>
+                </button>
+                <div class="content">
+                    <div class="contentContainer">
+                        <p>Materials will be made available in January, 2023.</p>
+                    </div>
+                </div>
             </div>
             <div class="session">
-                <h3 class="boldedFont">Session 6: Loops & Social and Ethical Issues in CS</h3>
-                <p>Materials will be made available in February, 2023.</p>
+                <button type="button" class="collapsible">
+                    <h3 class="boldedFont">Session 6: Loops & Social and Ethical Issues in CS</h3>
+                </button>
+                <div class="content">
+                    <div class="contentContainer">
+                        <p>Materials will be made available in February, 2023.</p>
+                    </div>
+                </div>
             </div>
             <div class="session">
-                <h3 class="boldedFont">Session 7: Putting It Together (Loops & Conditionals) & Cyber Security</h3>
-                <p>Materials will be made available in March, 2023.</p>
+                <button type="button" class="collapsible">
+                    <h3 class="boldedFont">Session 7: Putting It Together (Loops & Conditionals) & Cyber Security</h3>
+                </button>
+                <div class="content">
+                    <div class="contentContainer">
+                        <p>Materials will be made available in March, 2023.</p>
+                    </div>
+                </div>
             </div>
             <div class="session">
-                <h3 class="boldedFont">Session 8: Course Project</h3>
-                <p>Materials will be made available in April, 2023.</p>
+                <button type="button" class="collapsible">
+                    <h3 class="boldedFont">Session 8: Course Project</h3>
+                </button>
+                <div class="content">
+                    <div class="contentContainer">
+                        <p>Materials will be made available in April, 2023.</p>
+                    </div>
+                </div>
             </div>
             <div class="session">
-                <h3 class="boldedFont">Session 9: The Year in Review</h3>
-                <p>Materials will be made available in May, 2023.</p>
+                <button type="button" class="collapsible">
+                    <h3 class="boldedFont">Session 9: The Year in Review</h3>
+                </button>
+                <div class="content">
+                    <div class="contentContainer">
+                        <p>Materials will be made available in May, 2023.</p>
+                    </div>
+                </div>
             </div>
             <div class="session">
                 <h2 class="boldedFont">Continuing Resources</h2>
