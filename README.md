@@ -32,13 +32,12 @@ npm run dev
 
 After running, it should be available at [http://127.0.0.1:5173/](http://127.0.0.1:5173/) in your browser.
 
-## Compile and Minify for Production
+## Deploy
+This repo uses [Github Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) to host and deploy our code to a public url. The script below is configured to build the project, and deploy _just_ the `dist` folder to branch `gh-pages`. Github is configured to show anything in the root of that branch (i.e. our build).
 
 ```sh
-npm run build
+npm run deploy
 ```
-
-Upload the contents of dist folder to any repo displaying the project.
 
 ## Lint with [ESLint](https://eslint.org/)
 
