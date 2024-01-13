@@ -7,6 +7,7 @@
           <div v-for="coach in assistantCoaches">
             Assistant Coach ({{ coach.days }}): {{ coach.name }}
           </div>
+          <div style="padding-top: 12px"><a id="attendance" href="./attendance_incentives.png" target="_blank">2023-2024 Attendance Incentives</a></div>
         </div>
         <div class="contacts">
           <div>GCC Email: <a href="mailto:girlscodeclublancaster@gmail.com" target="_blank">girlscodeclublancaster@gmail.com</a></div>

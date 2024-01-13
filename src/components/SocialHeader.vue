@@ -9,6 +9,7 @@
       <RouterLink to="/" class="regularFont" :class="{ navUnderline: isHome }">Home</RouterLink>
       <RouterLink to="/schedule" class="regularFont" :class="{ navUnderline: isSchedule }">Schedule</RouterLink>
       <RouterLink to="/lessons" class="regularFont" :class="{ navUnderline: isLessons }">Lessons</RouterLink>
+      <a id="attendance" href="./attendance_incentives.png" target="_blank">Attendance Incentives</a>
       <RouterLink to="/shero" class="regularFont" :class="{ navUnderline: isSHEro }">SHEroes</RouterLink>
     </div>
   </div>
@@ -60,6 +61,15 @@ export default {
 
   .navLinks {
     margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    #attendance {
+      @media screen and (max-width: 690px) {
+        display: none;
+      }
+    }
 
     a {
       color: #f7f2e6;
