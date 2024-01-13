@@ -6,7 +6,7 @@
       </button>
       <div class="content" :class="{ contentHidden: !isOpen }">
         <div class="contentContainer">
-          <p class="sessionDesc">This session includes debugging with our Rubber Duckies and TWO "SHEro of the Month"s (Joan Clarke) for all cohorts. In addition...</p>
+          <p class="sessionDesc">This session includes debugging with our Rubber Duckies and TWO "SHEro of the Month"s (Grace Hopper) for all cohorts. In addition...</p>
           <p class="boldedFont">Cohorts 1 & 4</p>
           <ul class="regularFont">
             <li>Python data types and arrays, with group exercises & coding practice</li>
