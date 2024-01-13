@@ -9,7 +9,7 @@
       <RouterLink to="/" class="regularFont" :class="{ navUnderline: isHome }">Home</RouterLink>
       <RouterLink to="/schedule" class="regularFont" :class="{ navUnderline: isSchedule }">Schedule</RouterLink>
       <RouterLink to="/lessons" class="regularFont" :class="{ navUnderline: isLessons }">Lessons</RouterLink>
-      <a id="attendance" href="./attendance_incentives.png" target="_blank">Attendance</a>
+      <a id="attendance" href="https://girlscodeclublancaster.github.io/attendance_incentives.png" target="_blank">Attendance</a>
       <RouterLink to="/shero" class="regularFont" :class="{ navUnderline: isSHEro }">SHEroes</RouterLink>
     </div>
   </div>
