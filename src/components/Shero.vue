@@ -1,7 +1,7 @@
 <template>
   <main>
     <div class="shero">
-      <img :src="`./sheroes/${img}`" />
+      <img :src="`https://girlscodeclublancaster.github.io/sheroes/${img}`" />
     </div>
   </main>
 </template>
