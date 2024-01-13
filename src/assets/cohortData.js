@@ -1,40 +1,51 @@
 export default {
 	data() {
 		return {
-			participants: 292,
-			weekOfMonth: "3rd",
-			schoolYear: "2022-2023",
+			participants: 364,
+			weekOfMonth: "2nd",
+			schoolYear: "2023-2024",
 			assistantCoaches: [
-        {
-          id: 1,
-          days: "Wednesday",
-          name: "Lindsay Klatzkin"
-        },
-        {
-          id: 2,
-          days: "Sunday",
-          name: "Sarah Karpel"
-        }
+                {
+                    id: 1,
+                    days: "Wednesday",
+                    name: "Lindsay Klatzkin"
+                },
+                {
+                    id: 2,
+                    days: "Sunday",
+                    name: "Sarah Karpel"
+                },
+                {
+                    id: 2,
+                    days: "Thursday",
+                    name: "Amanda Mooney"
+                }
 			],
-			numCohorts: 3,
+			numCohorts: 4,
 			cohortDates: [
 				{
 					cohort: 1,
-					name: "Intermediate to Advanced Coders",
+					name: "JavaScript, Intermediate to Advanced Coders",
 					when: "Sundays @ 1:00 PM - 2:30 PM",
-					dates: ["9-18-2022", "10-23-2022", "11-20-2022", "12-11-2022", "1-15-2023", "2-12-2023", "3-12-2023", "4-16-2023", "5-14-2023"],
+					dates: ["9-10-2023", "10-8-2023", "11-12-2023", "12-10-2023", "1-14-2024", "2-4-2024", "3-10-2024", "4-14-2024", "5-12-2024"],
 				},
 				{
 					cohort: 2,
-					name: "Beginner Coders",
+					name: "Python, Beginner Coders",
 					when: "Sundays @ 3:00 PM - 4:30 PM",
-					dates: ["9-18-2022", "10-23-2022", "11-20-2022", "12-11-2022", "1-15-2023", "2-12-2023", "3-12-2023", "4-16-2023", "5-14-2023"],
+					dates: ["9-10-2023", "10-8-2023", "11-12-2023", "12-10-2023", "1-14-2024", "2-4-2024", "3-10-2024", "4-14-2024", "5-12-2024"],
 				},
 				{
 					cohort: 3,
-					name: "All Experience Levels",
+					name: "Python, All Experience Levels",
 					when: "Wednesdays @ 4:00 PM - 5:30 PM",
-					dates: ["9-21-2022", "10-19-2022", "11-16-2022", "12-14-2022", "1-18-2023", "2-15-2023", "3-15-2023", "4-19-2023", "5-17-2023"],
+					dates: ["9-13-2023", "10-11-2023", "11-8-2023", "12-13-2023", "1-10-2024", "2-7-2024", "3-13-2024", "4-10-2024", "5-8-2024"],
+				},
+                {
+					cohort: 4,
+					name: "JavaScript, All Experience Levels",
+					when: "Thursdays @ 4:00 PM - 5:30 PM",
+					dates: ["9-14-2023", "10-12-2023", "11-9-2023", "12-14-2023", "1-11-2024", "2-8-2024", "3-14-2024", "4-11-2024", "5-9-2024"],
 				}
 			],
 		}

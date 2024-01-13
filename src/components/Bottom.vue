@@ -3,19 +3,19 @@
     <div class="footerContainer">
       <div class="footer">
         <div class="instructors">
-          <div>Head Coach: <a href="mailto:emmali.montgomery@gmail.com" target="_blank">Emma Montgomery</a></div>
+          <div>Head Coach: <a href="mailto:emmali.montgomery@gmail.com" target="_blank">Emma Wertz</a></div>
           <div v-for="coach in assistantCoaches">
             Assistant Coach ({{ coach.days }}): {{ coach.name }}
           </div>
         </div>
         <div class="contacts">
           <div>GCC Email: <a href="mailto:girlscodeclublancaster@gmail.com" target="_blank">girlscodeclublancaster@gmail.com</a></div>
-          <div>LSF Contact: <a href="mailto:landis@tlsf.org">Emily Landis</a></div>
+          <div>LSF Contact: <a href="mailto:abakay@tlsf.org">Amanda Bakay</a></div>
         </div>
       </div>
       <div class="copyright">
         <i class="far fa-copyright"></i>
-        2022-2023
+        2023-2024
         <a href="https://lancastersciencefactory.org/" target="_blank"> The Lancaster Science Factory</a>
       </div>
     </div>
@@ -29,13 +29,18 @@ export default {
       assistantCoaches: [
         {
           id: 1,
+          days: "Sunday",
+          name: "Sarah Karpel"
+        },
+        {
+          id: 2,
           days: "Wednesday",
           name: "Lindsay Klatzkin"
         },
         {
-          id: 2,
-          days: "Sunday",
-          name: "Sarah Karpel"
+          id: 3,
+          days: "Thursday",
+          name: "Amanda Mooney"
         }
       ]
     }

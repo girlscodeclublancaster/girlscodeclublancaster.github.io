@@ -5,39 +5,27 @@
       <p class="regularFont">For the {{ schoolYear }} year, {{ sessionDescription }}</p>
       <session-1></session-1>
       <session-2></session-2>
+      <session-3></session-3>
+      <session-4></session-4>
+      <session-5></session-5>
       <div class="session">
         <button type="button" class="collapsible disabled">
-          <h3 class="boldedFont">Session 3: Using Data Types in Math & Functions</h3>
+          <h3 class="boldedFont">Session 6: Interactive Code</h3>
         </button>
       </div>
       <div class="session">
         <button type="button" class="collapsible disabled">
-          <h3 class="boldedFont">Session 4: Algorithms, Review with Google Logos, and DE&I in Technology</h3>
+          <h3 class="boldedFont">Session 7: Loops & Social and Ethical Issues in CS</h3>
         </button>
       </div>
       <div class="session">
         <button type="button" class="collapsible disabled">
-          <h3 class="boldedFont">Session 5: Conditionals & Where in the World is Technology?</h3>
+          <h3 class="boldedFont">Session 8: Putting It Together (Loops & Conditionals) & Cyber Security</h3>
         </button>
       </div>
       <div class="session">
         <button type="button" class="collapsible disabled">
-          <h3 class="boldedFont">Session 6: Loops & Social and Ethical Issues in CS</h3>
-        </button>
-      </div>
-      <div class="session">
-        <button type="button" class="collapsible disabled">
-          <h3 class="boldedFont">Session 7: Putting It Together (Loops & Conditionals) & Cyber Security</h3>
-        </button>
-      </div>
-      <div class="session">
-        <button type="button" class="collapsible disabled">
-          <h3 class="boldedFont">Session 8: Guided Course Project</h3>
-        </button>
-      </div>
-      <div class="session">
-        <button type="button" class="collapsible disabled">
-          <h3 class="boldedFont">Session 9: The Year in Review</h3>
+          <h3 class="boldedFont">Session 9: Algorithms</h3>
         </button>
       </div>
       <div class="session">
@@ -53,8 +41,11 @@ import cohortData from '../assets/cohortData.js';
 import lessonData from '../assets/lessons.js';
 import Session1 from '../components/sessions/Session1.vue';
 import Session2 from '../components/sessions/Session2.vue';
+import Session3 from '../components/sessions/Session3.vue';
+import Session4 from '../components/sessions/Session4.vue';
+import Session5 from '../components/sessions/Session5.vue';
 export default {
-  components: { Session1, Session2 },
+  components: { Session1, Session2, Session3, Session4, Session5 },
   data() {
     return {
       schoolYear: cohortData.data().schoolYear,
