@@ -6,7 +6,7 @@ import TheWelcome from '../components/TheWelcome.vue'
   <main>
     <div class="sheroes">
       <h2 class="boldedFont">SHEroes (Female Role-Models in Tech)</h2>
-      <p>This page will feature all SHEroes that have been presented to Girls Code Club.</p>
+      <p>This page will feature all SHEroes that have been presented to Girls Code Club. All graphics have been drawn by Head Coach, Emma Wertz, which is why some images are missing. This page is in progress! Information about each SHEro will also be included.</p>
       <div class="shero-container">
         <div v-for="shero in sheroesSorted" :key="shero.id">
           <Shero
