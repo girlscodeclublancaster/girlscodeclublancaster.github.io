@@ -76,7 +76,7 @@ export default {
         {
           id: 6,
           name: "Anita Borg",
-          img: "comingsoon.png",
+          img: "anita.png",
           description: "",
           link: ""
         },
@@ -139,21 +139,21 @@ export default {
         {
           id: 15,
           name: "Joan Ball",
-          img: "comingsoon.png",
+          img: "joan.png",
           description: "",
           link: ""
         },
         {
           id: 16,
           name: "Janese Swanson",
-          img: "comingsoon.png",
+          img: "janese.png",
           description: "",
           link: ""
         },
         {
           id: 17,
           name: "Jennifer Granick",
-          img: "comingsoon.png",
+          img: "jennifer.png",
           description: "",
           link: ""
         },
